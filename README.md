@@ -1,0 +1,2 @@
+# systemOfSmart
+multiterminal smart system
