@@ -1,11 +1,20 @@
 import React,{ useState } from 'react';
+import { Route,Switch,Redirect } from 'react-router-dom'
 import './App.css';
+import Login from './page/Login'
+import Index from './page/Index'
+import hasCookie from './assets/utils/routerGuard'
 
 
 function App() {
   return (
     <div className="App">
-      {'这是一个根组件'}
+      <Switch>
+      hasCookie ?
+        (<Route exact path='/' component={Index}></Route>)
+        :
+        (<Route exact path='/login' component={Login}></Route>)
+      </Switch>
     </div>
   );
 }
