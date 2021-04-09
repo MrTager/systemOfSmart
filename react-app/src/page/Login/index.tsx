@@ -1,35 +1,23 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './style.css'
-import { Form, Input, Button, Checkbox, Popconfirm, message} from 'antd';
+import { Form, Input, Button, Checkbox} from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-};
-const tailLayout = {
-    wrapperCol: { offset: 8, span: 16 },
-};
+
 interface Iprops  {
     userInfo: Object | String
 }
 const  Login = (props:Iprops) => {
     const {userInfo} = props
-    const [text] = useState({
-        forgetPwd:'请联系管理员！',
-        register:'请联系管理员开通！'
-    })
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
-    };
-    
-    const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-    };
-    const registerConfirm = () => {
-    }
-    const forgetPwsConfirm = () => {
-
-    }
+    // const onFinish = (values: any) => {
+    //     console.log('Success:', values);
+    // };
+    // const onFinishFailed = (errorInfo: any) => {
+    //     console.log('Failed:', errorInfo);
+    // };
+    // const registerConfirm = () => {
+    // }
+    // const forgetPwsConfirm = () => {
+    // }
     interface loginProps {
         username:String,
         password:String
@@ -61,6 +49,7 @@ const  Login = (props:Iprops) => {
         // })
     };
     return (
+        <>
         <div id='login-page' style={styles.page}>
                 <div>{JSON.stringify(userInfo)}</div>
                 <div className={'formContainer'}>
@@ -99,46 +88,31 @@ const  Login = (props:Iprops) => {
                                 placeholder="密码"
                                 />
                             </Form.Item>
-                            
-                            <Form.Item name="remember" valuePropName="checked" noStyle>
-                                <Checkbox>记住我</Checkbox>
-                            </Form.Item>
-                            <Form.Item>
-                                <Popconfirm
-                                    placement="right"
-                                    title={text.forgetPwd}
-                                    onConfirm={forgetPwsConfirm}
-                                    okText="确定"
-                                    cancelText="取消"
-                                >
-                                <a className={"login-form-forgot"} href="#">
-                                    忘记密码
-                                </a>
-                                </Popconfirm>
-                                
-                            </Form.Item>
+                            <div className={"psw-remember-forget-box"}>
+                                <Form.Item name="remember"  valuePropName="checked" noStyle>
+                                    <Checkbox>记住我</Checkbox>
+                                </Form.Item>
+                                <Form.Item>
+                                    <p className={"login-form-forgot"} >
+                                        忘记密码
+                                    </p>
+                                </Form.Item>
+                            </div>
 
                             <Form.Item>
                                 <Button type="primary" htmlType="submit" className={"login-form-button"}>
                                 登录
                                 </Button>
                                 或者 
-                                <Popconfirm
-                                    placement="right"
-                                    title={text.register}
-                                    onConfirm={registerConfirm}
-                                    okText="确定"
-                                    cancelText="取消"
-                                >
-                                <a href="#">
+                                <p>
                                 注册
-                                </a>
-                                </Popconfirm>
+                                </p>
                             </Form.Item>
                         </Form>
                     </div>
                 </div>
             </div>
+            </>
     )
 }
 

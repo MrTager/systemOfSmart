@@ -15,15 +15,29 @@
     height: 400px;
     margin: 100px auto 0px;
 }
-#components-form-demo-normal-login .login-form {
+#normal_login .login-form {
   max-width: 300px;
 }
-#components-form-demo-normal-login .login-form-forgot {
+#normal_login .login-form-forgot {
   float: right;
 }
-#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+.ant-form-item-control-input-content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.psw-remember-forget-box{
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+}
+#normal_login .ant-col-rtl .login-form-forgot {
   float: left;
 }
-#components-form-demo-normal-login .login-form-button {
-  width: 100%;
+#normal_login .login-form-button {
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
 }

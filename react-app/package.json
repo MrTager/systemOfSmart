@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "homepage":"./",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
@@ -159,6 +159,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.7"
+    "@types/react-router-config": "^5.0.2",
+    "@types/react-router-dom": "^5.1.7",
+    "babel-plugin-import": "^1.13.3"
   }
 }

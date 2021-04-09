@@ -1,13 +1,13 @@
 import React,{useState} from 'react';
-
-
 const Index = () => {
+
     return (
-        <>
         <div className='login-page' style={styles.page}>
             这是主页面
         </div>
-        </>
+        
+        
+        
     )
 }
 
