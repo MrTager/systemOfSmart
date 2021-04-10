@@ -23,11 +23,11 @@ function App() {
         (<Route exact path='/login' component={Login}></Route>)
       </Switch> */}
       <Provider store={store}>
-      <HashRouter>
         <ConfigProvider locale={zhCN}>
-         {renderRoutes(routers)}
+          <HashRouter>
+            {renderRoutes(routers)}
+          </HashRouter>
         </ConfigProvider>
-      </HashRouter>
     </Provider>
     </div>
   );

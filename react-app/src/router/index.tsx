@@ -16,24 +16,16 @@ const routers = [
     {
         path:'/',
         component:Index,
-        routes:[
-            {
-                path: "/",
-                exact: true,
-                render: () => <Redirect to={"/login"}/>
-            },
-            {
-                path:'/login',
-                component:SuspenseComponent(Login),
-                
-            },
-            {
-                path:'/404',
-                component:SuspenseComponent(NotFind),
-                
-            }
-        ]
     },
-    
+    {
+        path:'/login',
+        component:SuspenseComponent(Login),
+        
+    },
+    {
+        path:'/404',
+        component:SuspenseComponent(NotFind),
+        
+    }
 ]
-export default routers;
+export default routers
