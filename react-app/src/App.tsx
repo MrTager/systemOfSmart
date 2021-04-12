@@ -25,7 +25,13 @@ function App() {
       <Provider store={store}>
       <HashRouter>
         <ConfigProvider locale={zhCN}>
-         {renderRoutes(routers)}
+         {/* {renderRoutes(routers)} */}
+          <Switch>
+      hasCookie ?
+        (<Route exact path='/' component={Index}></Route>)
+        :
+        (<Route exact path='/login' component={Login}></Route>)
+      </Switch>
         </ConfigProvider>
       </HashRouter>
     </Provider>
