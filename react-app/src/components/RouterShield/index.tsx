@@ -1,23 +1,19 @@
-import react, { Component, FC } from 'react'
-import {Route,Redirect} from 'react-router-dom'
+import {Route,Redirect,useHistory  } from 'react-router-dom'
 import isCookie from '../../utils/routerGuard'
-import { Login,NotFind } from '../../router/index'
-import { pathToFileURL } from 'node:url'
-import { Components } from 'antd/lib/date-picker/generatePicker'
 
 interface Icomponent {
-    component:any,
-    path:string
+    component:any
+    path?:string
 }
 
-const RouterShield = ({component,path}:Icomponent) =>{
-   return isCookie ? 
-    (
-        <Route path={path} component={component}/> 
+const RouterShield = ({component:Component,...rest}:Icomponent) => (
+        <Route {...rest} render={(props:any):any=>{
+            true ? <Component {...props}/> : 
+            <Redirect to={{
+                pathname:'/login'
+            }}/>
+        }}/>
     )
-    : (
-        <Redirect to='/login' />
-    )
-    
-}
+
+
 export default RouterShield;

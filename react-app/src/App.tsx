@@ -5,11 +5,8 @@ import { Provider } from 'react-redux'
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import './App.css';
-import Index from './page/Index'
-import { Login,NotFind } from './router/index'
+import { Login,NotFind,Index } from './router/index'
 import RouterShield from './components/RouterShield'
-import hasCookie from './utils/routerGuard'
-import { renderRoutes } from 'react-router-config'
 
 function App() {
   return (
@@ -20,7 +17,9 @@ function App() {
           <HashRouter>
             <Switch>
               <Route exact path='/login' component={Login}></Route>
-              <RouterShield path='/' component={Index}></RouterShield>
+              <RouterShield  path='/' component={Index}></RouterShield>
+              <RouterShield  path='/index' component={Index}></RouterShield>
+              <Route   component={NotFind}></Route>
             </Switch>
           </HashRouter>
         </ConfigProvider>
