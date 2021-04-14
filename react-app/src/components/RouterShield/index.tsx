@@ -2,18 +2,12 @@ import {Route,Redirect,useHistory  } from 'react-router-dom'
 import isCookie from '../../utils/routerGuard'
 
 interface Icomponent {
-    component:any
-    path?:string
+    component:any,
+    path:string
 }
 
-const RouterShield = ({component:Component,...rest}:Icomponent) => (
-        <Route {...rest} render={(props:any):any=>{
-            true ? <Component {...props}/> : 
-            <Redirect to={{
-                pathname:'/login'
-            }}/>
-        }}/>
-    )
-
+const RouterShield = ({component,path}:Icomponent) =>{
+    return true ? <Route exact path={path} component={component}/>: <Redirect to='/login' />
+}
 
 export default RouterShield;

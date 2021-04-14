@@ -1,20 +1,72 @@
 import React,{useState} from 'react';
-const Index = () => {
+import { Layout, Menu, Breadcrumb } from 'antd';
+import {
+  DesktopOutlined,
+  PieChartOutlined,
+  FileOutlined,
+  TeamOutlined,
+  UserOutlined,
+} from '@ant-design/icons';
 
+const { Header, Content, Footer, Sider } = Layout;
+const { SubMenu } = Menu;
+
+import './index.scss'
+
+
+const Index = () => {
+    const [collapsed,setCollapsed] = useState(false)
+    const onCollapse = (collapsed:boolean) => {
+        setCollapsed(collapsed);
+    };
     return (
-        <div className='login-page' style={styles.page}>
-            这是主页面
+        <div className='index-page' style={styles.page}>
+            <Layout style={{ minHeight: '100vh' }}>
+                <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
+                <div className="logo" />
+                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+                    <Menu.Item key="1" icon={<PieChartOutlined />}>
+                    Option 1
+                    </Menu.Item>
+                    <Menu.Item key="2" icon={<DesktopOutlined />}>
+                    Option 2
+                    </Menu.Item>
+                    <SubMenu key="sub1" icon={<UserOutlined />} title="User">
+                    <Menu.Item key="3">Tom</Menu.Item>
+                    <Menu.Item key="4">Bill</Menu.Item>
+                    <Menu.Item key="5">Alex</Menu.Item>
+                    </SubMenu>
+                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+                    <Menu.Item key="6">Team 1</Menu.Item>
+                    <Menu.Item key="8">Team 2</Menu.Item>
+                    </SubMenu>
+                    <Menu.Item key="9" icon={<FileOutlined />}>
+                    Files
+                    </Menu.Item>
+                </Menu>
+                </Sider>
+                <Layout className="site-layout">
+                <Header className="site-layout-background" style={{ padding: 0 }} />
+                <Content style={{ margin: '0 16px' }}>
+                    <Breadcrumb style={{ margin: '16px 0' }}>
+                    <Breadcrumb.Item>User</Breadcrumb.Item>
+                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                    </Breadcrumb>
+                    <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                    Bill is a cat.
+                    </div>
+                </Content>
+                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                </Layout>
+            </Layout>
         </div>
-        
-        
-        
     )
 }
 
 const styles = {
     page:{
-        width:'100vw',
-        height:'100vh',
+        width:'100%',
+        height:'100%',
         backgroundColor:"#f5f5f6",
         border:'1px solid rgba(0,0,0,0)'
     }
