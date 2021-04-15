@@ -7,11 +7,11 @@ import {
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-
+import './index.scss'
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-import './index.scss'
+
 
 
 const Index = () => {
