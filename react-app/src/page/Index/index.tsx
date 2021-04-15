@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import {Link} from 'react-router-dom'
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -8,6 +9,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import './index.scss'
+import ContentView from '../../components/ContentView'
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -26,7 +28,8 @@ const Index = () => {
                 <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
-                    Option 1
+                    main页面
+                    <Link to='/main'></Link>
                     </Menu.Item>
                     <Menu.Item key="2" icon={<DesktopOutlined />}>
                     Option 2
@@ -53,10 +56,10 @@ const Index = () => {
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
                     </Breadcrumb>
                     <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                    Bill is a cat.
+                        <ContentView/>
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center' }}>WEBSIDE ©2018 CREATED BY MRTAGER</Footer>
                 </Layout>
             </Layout>
         </div>
