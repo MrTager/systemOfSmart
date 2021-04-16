@@ -9,7 +9,10 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import './index.scss'
-import ContentView from '../../components/ContentView'
+import ContentView from '../../components/ContentView';
+import { Home } from '../../router/index';
+import { HeaderContent } from '../../components/LazyComponent'
+import RouterShield from '../../components/RouterShield';
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -28,8 +31,7 @@ const Index = () => {
                 <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                     <Menu.Item key="1" icon={<PieChartOutlined />}>
-                    main页面
-                    <Link to='/main'></Link>
+                        <Link to='/index/main'>main页面</Link>
                     </Menu.Item>
                     <Menu.Item key="2" icon={<DesktopOutlined />}>
                     Option 2
@@ -49,8 +51,10 @@ const Index = () => {
                 </Menu>
                 </Sider>
                 <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0 }} />
-                <Content style={{ margin: '0 16px' }}>
+                <Header className="site-layout-background" style={{ padding: 0 }} >
+                    <HeaderContent />
+                </Header>
+                <Content style={{ margin: '0 16px',textAlign:'left' }}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>User</Breadcrumb.Item>
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>

@@ -77,6 +77,7 @@ const hasJsxRuntime = (() => {
   }
 })();
 
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
@@ -361,6 +362,7 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
+        
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
         {
@@ -554,8 +556,7 @@ module.exports = function (webpackEnv) {
             },
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
-            //scss loader
-            { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader']}
+           
           ],
         },
       ],

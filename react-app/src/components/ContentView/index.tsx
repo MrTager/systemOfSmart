@@ -1,16 +1,18 @@
 import React,{FC} from 'react'
-import {HashRouter as Router,Route,Switch} from 'react-router-dom'
+import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 
-import Home from '../../page/Home'
+import { Home,Index } from '../../router/index';
+import RouterShield from '../../components/RouterShield';
 function ContentView(){
     return (
-        <>
+        <div>
             <Router>
-                <Switch>
-                    <Route path='/main' component={Home}></Route>
+                <Switch> 
+                    <RouterShield  path='/index/main' component={Home}></RouterShield>
+                    <Route   component={Home}></Route>
                 </Switch>
             </Router>
-        </>
+        </div>
     )
     
 }

@@ -7,7 +7,7 @@ interface Icomponent {
 }
 
 const RouterShield = ({component,path}:Icomponent) =>{
-    return true ? <Route exact path={path} component={component}/>: <Redirect to='/login' />
+    return true ? <Route  path={path} component={component}/>: <Redirect to='/login' />
 }
 
 export default RouterShield;

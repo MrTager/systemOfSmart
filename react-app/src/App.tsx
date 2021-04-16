@@ -16,8 +16,8 @@ function App() {
           <Router>
             <Switch>
               <Route exact path='/login' component={Login}></Route>
-              <RouterShield  path='/' component={Index}></RouterShield>
               <RouterShield  path='/index' component={Index}></RouterShield>
+              <Redirect exact  from='/' to='/Index'/>
               <Route   component={NotFind}></Route>
             </Switch>
           </Router>
