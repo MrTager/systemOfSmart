@@ -3,7 +3,9 @@
     height: 100%;
     display: flex;
     justify-content:space-between;
-    .leftContent{
+    
+}
+.leftContent{
         width: 50px;
         height: 100%;
         margin-left: 20px;
@@ -12,11 +14,11 @@
         width: 300px;
         height: 100%;
         margin-right: 20px;
-        ul,li{
+       ul,li{
             padding: 0;
             margin: 0;
             list-style: none;
             text-align: right;
         }
-    }
-}
+    } 
+    

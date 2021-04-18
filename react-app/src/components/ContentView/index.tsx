@@ -1,7 +1,7 @@
-import React,{FC} from 'react'
+import React from 'react'
 import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 
-import { Home,Index } from '../../router/index';
+import { Home,Visual } from '../../router/index';
 import RouterShield from '../../components/RouterShield';
 function ContentView(){
     return (
@@ -9,6 +9,7 @@ function ContentView(){
             <Router>
                 <Switch> 
                     <RouterShield  path='/index/main' component={Home}></RouterShield>
+                    <RouterShield  path='/index/visual' component={Visual}></RouterShield>
                     <Route   component={Home}></Route>
                 </Switch>
             </Router>

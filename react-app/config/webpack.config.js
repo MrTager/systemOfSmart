@@ -138,6 +138,15 @@ module.exports = function (webpackEnv) {
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },
       },
+      // {
+      //   loader: 'sass-resources-loader',
+      //   options: {
+      //     resources: [
+      //       // resolve方法第二个参数为scss配置文件地址，如果有多个，就进行依次添加即可
+      //       path.resolve(__dirname, '../src/assets/css/_comment.scss'),
+      //     ],
+      //   }
+      // }
     ].filter(Boolean);
     if (preProcessor) {
       loaders.push(
@@ -362,7 +371,6 @@ module.exports = function (webpackEnv) {
     module: {
       strictExportPresence: true,
       rules: [
-        
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
         {
@@ -549,10 +557,18 @@ module.exports = function (webpackEnv) {
               // its runtime that would otherwise be processed through "file" loader.
               // Also exclude `html` and `json` extensions so they get processed
               // by webpacks internal loaders.
+
+
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
               options: {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
+
+              // exclude: [/\.js$/,/\.html$/,/\.json$/,/\.scss$/],
+              // loader: require.resolve('file-loader'),
+              // options: {
+              //         name: 'static/media/[name].[hash:8].[ext]',
+              //     },
             },
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.

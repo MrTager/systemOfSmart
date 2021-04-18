@@ -1,0 +1,34 @@
+@import '..\\..\\assets\\css\\_comment.scss';
+.visualPanel {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #0d112e;
+    position: relative;
+    button{
+        position: absolute;
+        right: 0px;
+    }
+}
+.panelContent {
+        width: 1400px;
+        height: 600px;
+        margin: 0 auto;
+       header {
+     
+            text-align: center;
+            // color:white;
+            // font-size: 10rem;
+            @include visual-font-style;
+        } 
+        span{
+            display: inline-block;
+            right: 10px;
+            top: 0px;
+            width: 30px;
+            height: 10px;
+        }
+}  
+.body{
+
+}
