@@ -14,13 +14,12 @@
         width: 1400px;
         height: 600px;
         margin: 0 auto;
-       header {
-     
+        header {
             text-align: center;
             // color:white;
             // font-size: 10rem;
             @include visual-font-style;
-        } 
+        }
         span{
             display: inline-block;
             right: 10px;
