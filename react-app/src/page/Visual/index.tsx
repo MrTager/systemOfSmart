@@ -1,4 +1,5 @@
 
+import { memo } from 'react'
 import styles from  './index.module.scss'
 
 /**
@@ -12,6 +13,9 @@ const Visual = () => {
                 <header>物联网可视化面板</header>
                 <div className={styles.body}>
                     这是body
+                    <div>左</div>
+                    <div>中</div>
+                    <div>右</div>
                 </div>
                 
             </div>

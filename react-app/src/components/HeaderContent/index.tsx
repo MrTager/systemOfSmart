@@ -17,7 +17,7 @@ const HeaderContent = () => {
             </div>
             <div className={styles.rightContent}>
                 <ul>
-                    <li >
+                    <li>
                         <Popover
                             style={{ width: 500 }}
                             content={hoverContent}
