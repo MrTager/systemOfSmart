@@ -30,3 +30,24 @@
   width: 30px;
   height: 10px;
 }
+
+.body {
+  display: flex;
+  flex-direction: columns;
+}
+
+.body .side {
+  width: 20%;
+  height: 563px;
+}
+
+.body .side s
+.sideBox {
+  width: 100%;
+  height: 200px;
+}
+
+.body .center {
+  width: 60%;
+  height: 563px;
+}
