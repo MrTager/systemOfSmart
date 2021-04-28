@@ -21,9 +21,7 @@ const Visual = () => {
                     <div className={styles.center}>中</div>
                     <div className={styles.side}>右</div>
                 </div>
-                
             </div>
-            
         </div>
     )
 }
