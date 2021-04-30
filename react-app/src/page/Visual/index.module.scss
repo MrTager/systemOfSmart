@@ -4,12 +4,31 @@ $screenWidth:1400px;
 $screenHeight:600px;
 $bodyHeight:$screenHeight - $headerHeight;
 $sideBoxHeight:200px;
+.my-component {
+    background: #fff;
+  }
+  
+  .fullscreen-enabled .my-component {
+    background: #000;
+  }
 .visualPanel {
     width: 100%;
     height: 100%;
     overflow: scroll;
     background-color: #0d112e;
     position: relative;
+    button{
+        position: absolute;
+        right: 0px;
+    }
+}
+.visualPanel_full {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #0d112e;
     button{
         position: absolute;
         right: 0px;
@@ -38,10 +57,11 @@ $sideBoxHeight:200px;
     flex-direction:columns;
     .side{
         width: 20%;
-        height: $bodyHeight;s
+        height: $bodyHeight;
         .sideBox{
             width: 100%;
             height: $sideBoxHeight;
+           // background-color:chocolate;
         }
     }
     
