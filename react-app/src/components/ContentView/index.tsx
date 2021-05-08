@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
+import {HashRouter as Router,Route,Switch} from 'react-router-dom'
 
 import { Home,Visual } from '../../router/index';
 import RouterShield from '../../components/RouterShield';
