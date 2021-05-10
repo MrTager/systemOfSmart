@@ -56,16 +56,15 @@ $sideBoxHeight:200px;
     display: flex;
     flex-direction:columns;
     .side{
-        width: 20%;
+        width: 20vw;
         height: $bodyHeight;
         .sideBox{
             width: 100%;
-            height: $sideBoxHeight;
-           // background-color:chocolate;
+            height: 40vh;
         }
     }
     .center{
-        width: 60%;
+        width: 60vw;
         height: $bodyHeight;
         //background-color: red;
     }

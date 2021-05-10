@@ -47,37 +47,44 @@ const VisualLineChartDeviceActive:React.FC = () => {
     useEffect(()=>{
         myEchart = echarts.init(myRef);
         myEchart.setOption({
-            legend: {
-                top: 'bottom'
+            darkMode:true,
+            tooltip: {
+                trigger: 'item'
             },
-            toolbox: {
-                show: true,
-                feature: {
-                    mark: {show: true},
-                    dataView: {show: true, readOnly: false},
-                    restore: {show: true},
-                    saveAsImage: {show: true}
-                }
+            legend: {
+                top: '5%',
+                left: 'center'
             },
             series: [
                 {
-                    name: '面积模式',
+                    name: '访问来源',
                     type: 'pie',
-                    radius: [50, 100],
-                    center: ['50%', '50%'],
-                    roseType: 'area',
-                    itemStyle: {
-                        borderRadius: 8
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: false,
+                        position: 'center',
+                        textStyle:{
+                            color:'#fff'
+                        },
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold',
+                            color:'#fff'
+                        }
+                    },
+                    labelLine: {
+                        show: false
                     },
                     data: [
-                        {value: 40, name: 'rose 1'},
-                        {value: 38, name: 'rose 2'},
-                        {value: 32, name: 'rose 3'},
-                        {value: 30, name: 'rose 4'},
-                        {value: 28, name: 'rose 5'},
-                        {value: 26, name: 'rose 6'},
-                        {value: 22, name: 'rose 7'},
-                        {value: 18, name: 'rose 8'}
+                        {value: 1048, name: '搜索引擎'},
+                        {value: 735, name: '直接访问'},
+                        {value: 580, name: '邮件营销'},
+                        {value: 484, name: '联盟广告'},
+                        {value: 300, name: '视频广告'}
                     ]
                 }
             ]
