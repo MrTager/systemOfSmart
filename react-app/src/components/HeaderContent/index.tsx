@@ -17,6 +17,9 @@ const HeaderContent = () => {
             <div className={styles.rightContent}>
                 <ul>
                     <li>
+                        <button>主题切换</button>
+                    </li>
+                    <li>
                         <Popover
                             style={{ width: 500 }}
                             content={hoverContent}

@@ -63,6 +63,8 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+const lessRegex =/\.less$/;
+const lessModuleRegex =/\.module\.less$/;
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -546,6 +548,53 @@ module.exports = function (webpackEnv) {
                 'sass-loader'
               ),
             },
+            {
+
+              test: lessRegex,
+        
+              exclude: lessModuleRegex,
+        
+              use:getStyleLoaders(
+        
+                    {    
+        
+                        importLoaders:2,
+        　　　　　　　　　　moudles: true,              //模块化　　
+                        sourceMap: isEnvProduction && shouldUseSourceMap,
+        
+                      },
+        
+                      'less-loader'
+        
+              ),
+        
+              sideEffects:true,
+        
+        },
+        
+        {
+        
+          test: lessModuleRegex,
+        
+          use:getStyleLoaders(
+        
+                {
+        
+                        importLoaders:2,
+        
+                        sourceMap: isEnvProduction && shouldUseSourceMap,
+        
+                        
+        
+                        getLocalIdent:getCSSModuleLocalIdent,
+        
+                  },
+        
+                  'less-loader'
+        
+              )
+        
+        }
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.
