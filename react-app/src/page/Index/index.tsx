@@ -55,11 +55,11 @@ const Index = () => {
                  
                 </Menu>
                 </Sider>
-                <Layout className="site-layout">
+                <Layout className="site-layout" style={{backgroundColor:'rgba(0,0,0,0)' }}>
                 <Header className="site-layout-background" style={{ padding: 0 }} >
                     <HeaderContent />
                 </Header>
-                <Content style={{ margin: '0 16px',textAlign:'left' }}>
+                <Content style={{ margin: '0 16px',textAlign:'left'}}>
                     <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>User</Breadcrumb.Item>
                     <Breadcrumb.Item>Bill</Breadcrumb.Item>
@@ -79,7 +79,7 @@ const styles = {
     page:{
         width:'100%',
         height:'100%',
-        backgroundColor:"#f5f5f6",
+        backgroundColor:"#171631",
         border:'1px solid rgba(0,0,0,0)'
     }
 }
