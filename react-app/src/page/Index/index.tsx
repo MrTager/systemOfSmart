@@ -1,18 +1,16 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {useSelector} from 'react-redux'
+import {RootState} from '../../store/index'
 import {
   DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
   TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import './index.scss'
 import ContentView from '../../components/ContentView';
-import { Home } from '../../router/index';
-import { HeaderContent } from '../../components/LazyComponent'
-import RouterShield from '../../components/RouterShield';
+import { HeaderContent } from '../../components/LazyComponent';
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -20,14 +18,14 @@ const { SubMenu } = Menu;
 
 
 const Index = () => {
-    const [collapsed,setCollapsed] = useState(false)
-    const onCollapse = (collapsed:boolean) => {
-        setCollapsed(collapsed);
-    };
+    const {collapsed} = useSelector((state:RootState)=>({
+        collapsed:state.index.sideToggle
+    }))
     return (
         <div className='index-page' style={styles.page}>
             <Layout style={{ minHeight: '100vh' }}>
-                <Sider trigger={null} collapsible collapsed={collapsed} onCollapse={onCollapse}>
+                {/* <Sider trigger={null} collapsible collapsed={collapsed} onCollapse={onCollapse}> */}
+                <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                     {/* <Menu.Item key="1" icon={<PieChartOutlined />}>

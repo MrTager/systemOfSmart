@@ -1,5 +1,4 @@
 
-import { memo,useState } from 'react'
 import styles from  './index.module.scss'
 import { VisualLineChartDeviceActive } from '../../components/LazyComponent_Visual'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";

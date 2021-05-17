@@ -1,4 +1,4 @@
 const types = {
-    SIDE_TOGGLE:"side_toggle"
+    SIDE_TOGGLE:"SIDE_TOGGLE"
 }
 export default types
