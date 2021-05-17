@@ -1,4 +1,4 @@
-@import '..\\..\\assets\\css\\_comment.scss';
+@import '..\\..\\assets\\styles\\_comment.scss';
 $headerHeight:37px;
 $screenWidth:1400px;
 $screenHeight:600px;
@@ -8,9 +8,9 @@ $sideBoxHeight:200px;
     background: #fff;
   }
   
-  .fullscreen-enabled .my-component {
+.fullscreen-enabled .my-component {
     background: #000;
-  }
+}
 .visualPanel {
     width: 100%;
     height: 100%;

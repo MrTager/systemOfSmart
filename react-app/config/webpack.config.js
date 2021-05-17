@@ -1,4 +1,5 @@
 'use strict';
+const { getThemeVariables } = require('antd/dist/theme');
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
@@ -558,11 +559,10 @@ module.exports = function (webpackEnv) {
                   loader: "less-loader",// compiles Less to CSS
                   options: {
                       sourceMap: true,
-                      modifyVars: {
-                          // 'primary-color': '#1DA57A',
-                          // 'link-color': '#1DA57A',
-                          // 'border-radius-base': '2px',
-                      },
+                      modifyVars:getThemeVariables({
+                        dark: true, // 开启暗黑模式
+                        compact: true, // 开启紧凑模式
+                      }),
                       javascriptEnabled: true,
                   }
               }]

@@ -4,6 +4,10 @@
     background: rgba(255, 255, 255, 0.3);
   }
   
-  .site-layout .site-layout-background {
-    background: #fff;
+  .site-layout .site-layout-background, .ant-layout-footer {
+    background: #141414;
+    color: #858585;
+  }
+  .ant-layout{
+    background-color: #000000;
   }
