@@ -72,7 +72,6 @@ const VisualLineChartDeviceActive:React.FC = () => {
                 }
             ]
         })
-        console.log('获取节点',myRef)
     },[])
     return (
         <div  className={styles.box}>
