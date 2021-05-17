@@ -1,4 +1,4 @@
-import action from './action';
-import types from './actionTypes';
-import reducer from './reducer'
+import * as action from './action';
+import * as types from './actionTypes';
+import * as reducer from './reducer'
 export { action , types , reducer };
