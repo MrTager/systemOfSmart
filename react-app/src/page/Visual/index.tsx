@@ -9,8 +9,9 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 const Visual:React.FC = () => {
     const handle = useFullScreenHandle();
     const handleToggle = handle.enter;
+    const bgColor_dark = '#141414' //变量保存用于主题切换
     return (
-        <div className={styles.visualPanel} >
+        <div className={styles.visualPanel} style={{backgroundColor:bgColor_dark}} >
             <button onClick={()=>handleToggle()}>全屏显示</button>
             <FullScreen handle={handle}>
             <div className={styles.panelContent}>
