@@ -22,23 +22,6 @@ import {
 
 type ECOption = echarts.ComposeOption< BarSeriesOption | LineSeriesOption | TitleComponentOption | GridComponentOption >;
 const VisualLineChartDeviceActive:React.FC = () => {
-    // const getOption = () => {
-    //     let option = {
-    //         xAxis: {
-    //             type: 'category',
-    //             data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    //         },
-    //         yAxis: {
-    //             type: 'value'
-    //         },
-    //         series: [{
-    //             data: [820, 932, 901, 934, 1290, 1330, 1320],
-    //             type: 'line',
-    //             smooth: true
-    //         }],
-    //     };
-    //     return option
-    // }
     let myRef:any = null;
     const setMyRef = (e:any) => {
         myRef = e
@@ -91,16 +74,7 @@ const VisualLineChartDeviceActive:React.FC = () => {
         })
         console.log('获取节点',myRef)
     },[])
-
-
     return (
-        // <div className={styles.box}>
-        //     <ReactEcharts
-        //         className={styles.content}
-        //         style={{width:'100%',height:'250px',padding:'0px'}}
-        //         option={getOption()}
-        //     ></ReactEcharts>
-        // </div>
         <div  className={styles.box}>
             <div className={styles.content} ref={setMyRef}></div>
         </div>

@@ -26,9 +26,9 @@ const HeaderContent = () => {
             </div>
             <div className={styles.rightContent}>
                 <ul>
-                    <li>
+                    {/* <li>
                         <button >主题切换</button>
-                    </li>
+                    </li> */}
                     <li>
                         <Popover
                             style={{ width: 500 }}
