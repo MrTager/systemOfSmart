@@ -7,6 +7,7 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
  * 可视化面板
  */
 const Visual:React.FC = () => {
+ 
     const handle = useFullScreenHandle();
     const handleToggle = handle.enter;
     const bgColor_dark = '#141414' //变量保存用于主题切换

@@ -4,7 +4,6 @@ const visualLineChartDeviceActive = lazy(() => import('../VisualLineChartDeviceA
 
 
 // const loading = () => (
-    
 // )
 const SuspenseComponent = (Component:LazyExoticComponent<any>) => ( props:any ) => (
             <Suspense fallback={<Skeleton active />}>
