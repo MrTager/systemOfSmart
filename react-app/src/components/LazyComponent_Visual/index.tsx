@@ -1,9 +1,13 @@
-import React,{ lazy,LazyExoticComponent,Suspense} from 'react'
+import { lazy,LazyExoticComponent,Suspense} from 'react'
+import { Skeleton } from 'antd';
 const visualLineChartDeviceActive = lazy(() => import('../VisualLineChartDeviceActive'));
 
 
+// const loading = () => (
+    
+// )
 const SuspenseComponent = (Component:LazyExoticComponent<any>) => ( props:any ) => (
-            <Suspense fallback={null}>
+            <Suspense fallback={<Skeleton active />}>
                 <Component {...props}></Component>
             </Suspense>
 )

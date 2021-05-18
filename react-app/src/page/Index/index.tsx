@@ -17,7 +17,7 @@ const { SubMenu } = Menu;
 
 
 
-const Index = () => {
+const Index:React.FC = () => {
     const {collapsed} = useSelector((state:RootState)=>({
         collapsed:state.index.sideToggle
     }))
