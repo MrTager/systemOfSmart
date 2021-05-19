@@ -4,7 +4,7 @@ export interface IndexState {
     sideToggle:boolean
 }
 const defaultState:IndexState = {
-    sideToggle:false
+    sideToggle:true
 }
 export const indexReducer = produce((state,action:AnyAction) => {
     switch (action.type){

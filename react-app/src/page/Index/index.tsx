@@ -36,7 +36,7 @@ const Index:React.FC = () => {
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<UserOutlined />} title="智能设备">
                     <Menu.Item key="3">
-                        <Link to='/index/SmartDevice'>设备品类</Link>
+                        <Link to='/index/SmartDevice'>项目管理</Link>
                     </Menu.Item>
                     <Menu.Item key="4">
                         <Link to='/index/main'>子设备</Link>
@@ -62,7 +62,7 @@ const Index:React.FC = () => {
                         <Breadcrumb.Item>User</Breadcrumb.Item>
                         <Breadcrumb.Item>Bill</Breadcrumb.Item>
                     </Breadcrumb>
-                    <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                    <div className="site-·-background" style={{ padding: 24, minHeight: 360 }}>
                         <ContentView/>
                     </div>
                 </Content>
