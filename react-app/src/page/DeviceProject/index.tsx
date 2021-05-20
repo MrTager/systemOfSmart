@@ -11,7 +11,11 @@ const DeviceProject:React.FC = () => {
     })
     const onSearch = (value:String) => {
         console.log(value);
-        console.log(getDeviceProjectList());
+        getDeviceProjectList()
+        .then((res)=>{
+            console.log(res)
+        })
+        
         
     }
     const listItem = (arr:Array<object>) => {

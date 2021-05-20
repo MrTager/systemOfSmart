@@ -1,4 +1,4 @@
-const Mock = require('mockjs')
+import Mock from 'mockjs'
 
 const projectList = Mock.mock(require('./projectList.json'))
 
