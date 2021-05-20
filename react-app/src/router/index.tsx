@@ -5,7 +5,7 @@ const login = lazy(() => import('../page/Login'));
 const notfind = lazy(() => import('../page/404'));
 const home = lazy(() =>  import('../page/Home'));
 const visual = lazy(() => import('../page/Visual'));
-const smartDevice = lazy(() => import('../page/SmartDevice'));
+const smartDevice = lazy(() => import('../page/DeviceProject'));
 
 const SuspenseComponent = (Component:LazyExoticComponent<any>) => ( props:any ) => (
             <Suspense fallback={null}>
