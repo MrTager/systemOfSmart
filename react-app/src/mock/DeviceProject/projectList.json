@@ -1,0 +1,9 @@
+{
+    "list|30-100":[{
+    "title":"Random.csentence(1, 10)",
+    "id":"Random.word(15)",
+    "deviceProject":"Random.natural(1, 100)",
+    "app":"Random.natural(0, 3)",
+    "member":"Random.natural(1, 50)",
+    "createDate":"Random.date('yyyy-MM-dd')"
+}]}
