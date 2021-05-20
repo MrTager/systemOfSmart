@@ -2,7 +2,7 @@ import { Input } from 'antd';
 import styles from './index.module.scss'
 
 const { Search } = Input;
-const SmartDevice:React.FC = () => {
+const DeviceProject:React.FC = () => {
     const onSearch = (value:String) => console.log(value);
     const listItem = (arr:Array<object>) => {
         arr.map( item => {
@@ -28,4 +28,4 @@ const SmartDevice:React.FC = () => {
         </>
     )
 }
-export default SmartDevice;
+export default DeviceProject;
