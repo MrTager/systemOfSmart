@@ -1,6 +1,6 @@
 import Mock from 'mockjs'
 
-const projectList = Mock.mock(require('./projectList.json'))
+import projectList from './projectList'
 
 export default [
     {

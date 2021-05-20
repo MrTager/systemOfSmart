@@ -34,12 +34,13 @@ service.interceptors.request.use(
 service.interceptors.response.use(
     response => {
         const res = response.data
-        if(res.errorCode !== 0){
-            message.error(res.message)
-            return Promise.reject(res)
-        }else{
-          return res
-        }
+        // if(res.errorCode !== 0){
+        //     message.error(res.message)
+        //     return Promise.reject(res)
+        // }else{
+        //   return res
+        // }
+        return res
     },
     error => {
         return Promise.reject(error)
