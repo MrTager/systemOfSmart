@@ -1,7 +1,7 @@
 import React from 'react'
 import {HashRouter as Router,Route,Switch} from 'react-router-dom'
 
-import { Home,Visual,SmartDevice } from '../../router/index';
+import { Home,Visual,DeviceProject } from '../../router/index';
 import RouterShield from '../../components/RouterShield';
 function ContentView(){
     return (
@@ -10,7 +10,7 @@ function ContentView(){
                 <Switch> 
                     <RouterShield  path='/index/main' component={Home}></RouterShield>
                     <RouterShield  path='/index/visual' component={Visual}></RouterShield>
-                    <RouterShield  path='/index/SmartDevice' component={SmartDevice}></RouterShield>
+                    <RouterShield  path='/index/deviceProject' component={DeviceProject}></RouterShield>
                     <Route   component={Home}></Route>
                 </Switch>
             </Router>

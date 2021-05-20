@@ -36,7 +36,7 @@ const Index:React.FC = () => {
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<UserOutlined />} title="智能设备">
                     <Menu.Item key="3">
-                        <Link to='/index/SmartDevice'>项目管理</Link>
+                        <Link to='/index/DeviceProject'>项目管理</Link>
                     </Menu.Item>
                     <Menu.Item key="4">
                         <Link to='/index/main'>子设备</Link>

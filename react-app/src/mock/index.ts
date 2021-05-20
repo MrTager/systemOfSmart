@@ -1,4 +1,5 @@
-const Mock = require('mockjs')
+// const Mock = require('mockjs')
+import Mock from 'mockjs'
 
 const deviceProject = require('./DeviceProject').default
 
