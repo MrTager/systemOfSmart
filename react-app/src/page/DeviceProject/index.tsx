@@ -7,9 +7,13 @@ const { Search } = Input;
 const DeviceProject:React.FC = () => {
     useEffect(()=>{
         // getDeviceProjectList()
-        console.log('请求', getDeviceProjectList())
+        // console.log('请求', getDeviceProjectList())
     })
-    const onSearch = (value:String) => console.log(value);
+    const onSearch = (value:String) => {
+        console.log(value);
+        console.log(getDeviceProjectList());
+        
+    }
     const listItem = (arr:Array<object>) => {
         arr.map( item => {
             return (<div>{item}</div>)
@@ -28,7 +32,7 @@ const DeviceProject:React.FC = () => {
                     />
                 </header>
                 <div>
-                    {listItem}
+                    {/* {listItem} */}
                 </div>
             </div>
         </>
