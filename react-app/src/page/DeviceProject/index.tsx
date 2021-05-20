@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useState,useEffect,ReactElement } from 'react'
 import { Input } from 'antd';
 import styles from './index.module.scss'
-import {getDeviceProjectList} from '../../api/DeviceProject'
+import {getDeviceProjectList,IprojectList} from '../../api/DeviceProject'
 
 const { Search } = Input;
 const DeviceProject:React.FC = () => {
+    const [itemObj,setItemObj] = useState([])
     useEffect(()=>{
         // getDeviceProjectList()
         // console.log('请求', getDeviceProjectList())
@@ -12,16 +13,18 @@ const DeviceProject:React.FC = () => {
     const onSearch = (value:String) => {
         console.log(value);
         getDeviceProjectList()
-        .then((res)=>{
+        .then((res:any)=>{
             console.log(res)
+            setItemObj(res.list)
         })
         
         
     }
     const listItem = (arr:Array<object>) => {
-        arr.map( item => {
-            return (<div>{item}</div>)
+        arr.map( (item,index) => {
+            <div key={index}>{item}</div>
         })
+        return arr
     }
     return (
         <>
@@ -36,7 +39,7 @@ const DeviceProject:React.FC = () => {
                     />
                 </header>
                 <div>
-                    {/* {listItem} */}
+                    {listItem(itemObj)}
                 </div>
             </div>
         </>
