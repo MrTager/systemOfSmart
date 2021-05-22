@@ -562,6 +562,14 @@ module.exports = function (webpackEnv) {
                       modifyVars:getThemeVariables({
                         dark: true, // 开启暗黑模式
                         compact: true, // 开启紧凑模式
+                        '@primary-color':"#141414",
+                        "primary-color": "#141414",
+                        'link-color': '#fc9153',
+                        'text-color': '#666666',
+                        'error-color': '#db2a36',
+                        'success-color': '#1b733e',
+                        'waring-color': '#ffd00b',
+                        'heading-color': '#272933'
                       }),
                       javascriptEnabled: true,
                   }

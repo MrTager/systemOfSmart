@@ -1,8 +1,9 @@
 import { useState,useEffect,ReactElement } from 'react'
 import { Input,Card } from 'antd';
 import styles from './index.module.scss'
+// import './index.scss'
 import {getDeviceProjectList} from '../../api/DeviceProject'
-
+require('./index.scss')
 const { Search } = Input;
 const DeviceProject:React.FC = () => {
     const [itemObj,setItemObj] = useState([])
@@ -17,8 +18,6 @@ const DeviceProject:React.FC = () => {
             console.log(res)
             setItemObj(res.list)
         })
-        
-        
     }
     // const listItem = (arr:Array<object>) => {
     //     arr.map( (item,index) => {
@@ -36,6 +35,7 @@ const DeviceProject:React.FC = () => {
                         enterButton="Search"
                         size="large"
                         onSearch={onSearch}
+                        style={{backgroundColor:'#141414'}}
                     />
                 </header>
                 <div className={styles.cardGroup}>
