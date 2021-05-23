@@ -8,8 +8,11 @@ const { Search } = Input;
 const DeviceProject:React.FC = () => {
     const [itemObj,setItemObj] = useState([])
     useEffect(()=>{
-        // getDeviceProjectList()
-        // console.log('请求', getDeviceProjectList())
+        getDeviceProjectList()
+        .then((res:any)=>{
+            console.log(res)
+            setItemObj(res.list)
+        })
     })
     const onSearch = (value:String) => {
         console.log(value);
@@ -40,8 +43,8 @@ const DeviceProject:React.FC = () => {
                 </header>
                 <div className={styles.cardGroup}>
                     {itemObj.map((item:any,index:number) => 
-                    <div key={index}>
-                        <Card title={item.title} bordered={false} style={{ width: 300,height: 280,backgroundColor:'#141414',color:'#858585' }}>
+                    <div className={styles.card} key={index}>
+                        <Card title={'项目名称:'+item.title} bordered={false} headStyle={{border:'none'}} style={{ width: 300,height: 280,backgroundColor:'#141414',color:'#858585'}}>
                             <p>ID:{item.id}</p>
                             <p>设备数:{item.deviceProject}</p>
                             <p>APP数量:{item.app}</p>

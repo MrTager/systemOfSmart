@@ -1,5 +1,5 @@
 $headerHeight:40px;
-$cardGroupWidth:100%;
+$cardGroupWidth:1000px;
 .content{
     width: 100%;
     height: 100%;
@@ -8,10 +8,15 @@ $cardGroupWidth:100%;
         height: $headerHeight;
     }
     .cardGroup{
-        width: $cardGroupWidth;
-        // justify-content: space-evenly;
-        // align-items: center;
-        flex-direction:column;
+        min-width: $cardGroupWidth;
         background-color: coral;
+        .card{
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .card:hover{
+            border: 1px solid #ccc;
+        }
     }
 }
