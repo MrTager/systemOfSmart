@@ -1,0 +1,56 @@
+$headerWidth:800px;
+$headerHeight:80px;
+$headerTitleWidth:400px;
+$headerTitleSize:40px;
+$headerItem_1Width:200px;
+$headerItem_1TitleSize:20px;
+$headerItem_1TitleValue:20px;
+.header{
+    min-width: $headerWidth;
+    height: $headerHeight;
+    .title{
+        display: block;
+        width: $headerTitleWidth;
+        height: $headerHeight;
+        font-size: $headerTitleSize;
+        line-height: $headerHeight;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        float: left;
+    }
+    .item_1{
+        width: $headerItem_1Width;
+        height: $headerHeight;
+        font-size: $headerItem_1TitleSize;
+        float: left;
+        text-align: center;
+        margin-left: 20px;
+    }
+}
+.body{
+    min-width: $headerWidth;
+    .group{
+        min-width:$headerWidth;
+        .card{
+            float: left;
+            margin: 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+            img{
+                float: left;
+                margin-top: 10px;
+            }
+            ul{
+                float: left;
+                list-style: none;
+                li{
+                    list-style: none;
+                }
+            }
+        }
+        .card:hover{
+            box-shadow: 0px 0px 5px #888888;
+        }
+    }
+}

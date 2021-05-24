@@ -8,9 +8,7 @@ $cardGroupWidth:1000px;
         height: $headerHeight;
     }
     .cardGroup{
-        min-width: $cardGroupWidth;
-        background-color: coral;
-        
+        min-width: $cardGroupWidth;       
         .card{
             float: left;
             margin: 10px;

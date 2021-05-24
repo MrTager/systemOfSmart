@@ -6,6 +6,7 @@ const notfind = lazy(() => import('../page/404'));
 const home = lazy(() =>  import('../page/Home'));
 const visual = lazy(() => import('../page/Visual'));
 const deviceProject = lazy(() => import('../page/DeviceProject'));
+const projectCategory = lazy(()=> import('../page/ProjectCategory'));
 
 const SuspenseComponent = (Component:LazyExoticComponent<any>) => ( props:any ) => (
             <Suspense fallback={null}>
@@ -18,3 +19,4 @@ export const Index = SuspenseComponent(index);
 export const Home = SuspenseComponent(home);
 export const Visual = SuspenseComponent(visual);
 export const DeviceProject = SuspenseComponent(deviceProject);
+export const ProjectCategory = SuspenseComponent(projectCategory);

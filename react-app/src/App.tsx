@@ -11,7 +11,7 @@ require('./mock')
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{color:'#858585'}}>
       <Provider store={store}>
         <ConfigProvider locale={zhCN}>
           <Router>

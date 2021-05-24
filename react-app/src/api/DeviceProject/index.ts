@@ -20,3 +20,14 @@ export const getDeviceProjectList = () => {
         data:{}
     })
 }
+/**
+ * 
+ * @returns device category list
+ */
+ export const getDeviceCategoryList = () => {
+    return request({
+        url:'/deviceProject/projectCategoryList',
+        method:'post',
+        data:{}
+    })
+}
