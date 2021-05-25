@@ -11,4 +11,12 @@
   .ant-layout{
     background-color: #000000;
   }
- 
+  .ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub{
+    background: #141414;
+  }
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color: #2e2e2e;
+  }
+  .ant-input-group-addon::selection{
+    background:#636363
+  }
