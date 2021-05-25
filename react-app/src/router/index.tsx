@@ -9,6 +9,7 @@ const deviceProject = lazy(() => import('../page/DeviceProject'));
 const projectCategory = lazy(()=> import('../page/ProjectCategory'));
 const smartDeviceInfo = lazy(()=> import('../page/SmartDeviceInfo'));
 const projectCategoryInfo = lazy(()=> import('../page/ProjectCategoryInfo'));
+const smartDeviceList = lazy(()=> import('../page/SmartDeviceList'));
 
 const SuspenseComponent = (Component:LazyExoticComponent<any>) => ( props:any ) => (
             <Suspense fallback={null}>
@@ -24,3 +25,4 @@ export const DeviceProject = SuspenseComponent(deviceProject);
 export const ProjectCategory = SuspenseComponent(projectCategory);
 export const SmartDeviceInfo = SuspenseComponent(smartDeviceInfo);
 export const ProjectCategoryInfo = SuspenseComponent(projectCategoryInfo);
+export const SmartDeviceList = SuspenseComponent(smartDeviceList);

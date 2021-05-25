@@ -39,7 +39,7 @@ const Index:React.FC = () => {
                         <Link to='/index/DeviceProject'>项目管理</Link>
                     </Menu.Item>
                     <Menu.Item key="4">
-                        <Link to='/index/main'>子设备</Link>
+                        <Link to='/index/smartDeviceList'>子设备</Link>
                     </Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" icon={<TeamOutlined />} title="用户运营">
