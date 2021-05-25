@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
 import {getDeviceCategoryList} from '../../api/DeviceProject'
+import {Link} from 'react-router-dom'
 import { Card } from 'antd';
 import styles from './index.module.scss'
 const ProjectCategory:React.FC = () => {
@@ -9,7 +10,6 @@ const ProjectCategory:React.FC = () => {
     useEffect(()=>{
         getDeviceCategoryList()
         .then((res:any)=>{
-            console.log('获取到',res)
             setProjectTitle(res.projectName)
             setProjectNumber(res.projectNum)
             setProjectList(res.list)
@@ -28,16 +28,18 @@ const ProjectCategory:React.FC = () => {
                 <div className={styles.group}>
                     {projectList.map((item:any,index:number) => 
                     <div className={styles.card} key={index}>
-                        <Card title={'项目名称:'+item.title} bordered={false} headStyle={{border:'none',color:'#858585',fontWeight:'bold'}} style={{ width: 400,height: 250,backgroundColor:'#141414',color:'#858585'}}>
-                            <img src={item.image} alt="设备实物图" />
-                            <ul>
-                                <li>ProductKey:{item.productKey}</li>
-                                <li>状态:{item.state}</li>
-                                <li>品类:{item.category}</li>
-                                <li>模组:{item.module}</li>
-                                <li>创建日期:{item.createDate}</li>
-                            </ul>
-                        </Card>
+                        <Link to='/index/projectCategoryInfo'>
+                            <Card title={'项目名称:'+item.title} bordered={false} headStyle={{border:'none',color:'#858585',fontWeight:'bold'}} style={{ width: 400,height: 250,backgroundColor:'#141414',color:'#858585'}}>
+                                <img src={item.image} alt="设备实物图" />
+                                <ul>
+                                    <li>ProductKey:{item.productKey}</li>
+                                    <li>状态:{item.state}</li>
+                                    <li>品类:{item.category}</li>
+                                    <li>模组:{item.module}</li>
+                                    <li>创建日期:{item.createDate}</li>
+                                </ul>
+                            </Card>
+                        </Link>
                     </div>)}
                 </div>
            
