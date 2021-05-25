@@ -31,3 +31,14 @@ export const getDeviceProjectList = () => {
         data:{}
     })
 }
+/**
+ * 
+ * @returns device Info list
+ */
+ export const getProjectCategoryInfo = () => {
+    return request({
+        url:'/deviceProject/projectCategoryInfo',
+        method:'post',
+        data:{}
+    })
+}

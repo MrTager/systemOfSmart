@@ -1,0 +1,16 @@
+.ant-table,.ant-table-thead > tr > th{
+    background: #141414;
+    color: #858585;
+}
+.ant-table-thead > tr > th{
+    font-size: 18px;
+    font-weight: bold;
+    color: #9e9e9e;
+    border-bottom: 1px solid #292929;
+}
+.ant-table-tbody > tr > td{
+    border-bottom: 1px solid #292929;
+}
+.ant-table-tbody > tr.ant-table-row:hover > td{
+    background: #2e2e2e;
+}

@@ -2,6 +2,7 @@ import Mock from 'mockjs'
 
 import projectList from './projectList'
 import projectCategoryList from './projectCategoryList'
+import projectCategoryInfo from './projectCategoryInfo'
 
 export default [
     {
@@ -16,6 +17,13 @@ export default [
         type:'post',
         response:(config:any) => {
             return projectCategoryList
+        }
+    },
+    {
+        url:'/deviceProject/projectCategoryInfo',
+        type:'post',
+        response:(config:any) => {
+            return projectCategoryInfo
         }
     }
 ]

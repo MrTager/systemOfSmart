@@ -66,7 +66,7 @@ const Index:React.FC = () => {
                         <ContentView/>
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>WEBSIDE ©2018 CREATED BY MRTAGER</Footer>
+                <Footer style={{ textAlign: 'center' }}>WEBSIDE ©2021 CREATED BY MRTAGER</Footer>
                 </Layout>
             </Layout>
         </div>
