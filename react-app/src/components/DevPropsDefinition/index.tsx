@@ -1,10 +1,11 @@
 import {useState,useEffect} from 'react'
 import {getProjectCategoryInfo} from '../../api/DeviceProject'
-import {Table} from 'antd'
+import {Table,Spin } from 'antd'
 import styles from './index.module.scss'
 import './index.scss'
 /**props definition */
 const DevPropsDefinition:React.FC = () => {
+    const [pageLoading,setPageLoading] = useState(false)
     const columns = [
         {
             title: '类型',
@@ -35,15 +36,23 @@ const DevPropsDefinition:React.FC = () => {
     useEffect(()=>{
         getProjectCategoryInfo()
         .then((res:any)=>{
-            console.log("结果",res)
             setDataBody(res.list)
+            setPageLoading(true)
         })
-    })
+    },[])
     return (
         <>
-            <div className={styles.content}>
-                <Table columns={dataMode} dataSource={dataBody} />
-            </div>
+            {
+                pageLoading ?
+                <>
+                    <div className={styles.content}>
+                        <Table key='num'  columns={dataMode} dataSource={dataBody} />
+                    </div> 
+                </>
+                :
+                <Spin size='large'/>
+            }
+            
         </>
     )
 }

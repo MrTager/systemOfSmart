@@ -5,7 +5,7 @@ import deviceList from './deviceList'
 
 export default [
     {
-        url:'/deviceProject/deviceList',
+        url:'/device/deviceList',
         type:'post',
         response:(config:any) => {
             return deviceList

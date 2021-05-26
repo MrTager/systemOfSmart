@@ -15,7 +15,7 @@ export interface IprojectList {
  */
 export const getDeviceList = () => {
     return request({
-        url:'/deviceProject/deviceList',
+        url:'/device/deviceList',
         method:'post',
         data:{}
     })

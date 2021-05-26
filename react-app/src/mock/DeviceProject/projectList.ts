@@ -11,7 +11,7 @@ for(let i=0;i<randomNumber;i++){
         "member":Random.natural(1, 50),
         "createDate":Random.date('yyyy-MM-dd')
     })
-    arr.push(item)
+    arr.push(item);
 }
 
 let list = {

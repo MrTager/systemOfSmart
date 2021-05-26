@@ -21,7 +21,8 @@ Random.category();
 Random.module();
 for(let i=0;i<randomNumber;i++){
     let item = Mock.mock({
-        "deviceName":Random.csentence(1, 20),
+        "deviceName|20":"",
+        "projectName":Random.string(5,10),
         "productKey":Random.word(11),
         "state":"@STATE",
         "category":"@CATEGORY",
