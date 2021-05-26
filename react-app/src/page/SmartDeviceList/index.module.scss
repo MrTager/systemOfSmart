@@ -1,0 +1,23 @@
+$contentWidth:1000px;
+$contentItemWidth:200px;
+$infoHeight:60px;
+$infoFontSize:20px;
+.info{
+    min-width: $contentWidth;
+    height: $infoHeight;
+    display: flex;
+    flex-direction: row;
+    font-size: $infoFontSize;
+    div{
+        width: $contentItemWidth;
+        height: $infoHeight;
+        text-align: center;
+    }
+    div:first-child{
+        text-align: left;
+        line-height: $infoHeight;
+    }
+}
+.content{
+    min-width: $contentWidth;
+}
