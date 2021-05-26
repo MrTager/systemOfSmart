@@ -11,7 +11,7 @@ export interface IprojectList {
 }
 /**
  * 
- * @returns device  list
+ * @returns device list
  */
 export const getDeviceList = () => {
     return request({
