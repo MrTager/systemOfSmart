@@ -58,33 +58,33 @@ const SmartDeviceList:React.FC = () => {
             {
                 pageLoading ? 
                 <>
-                <header>设备列表页面</header>
-                <div className={styles.info}>
-                    <div>
-                        <Select defaultValue={selectArray[0]} style={{ width: 120 }} onChange={handleChange}>
-                            {
-                                selectArray.map((item,index) => {
-                                    return <Option value={item} key={index}>{item}</Option>
-                                })
-                            }
-                        </Select>
+                    <header>设备列表页面</header>
+                    <div className={styles.info}>
+                        <div>
+                            <Select defaultValue={selectArray[0]} style={{ width: 120 }} onChange={handleChange}>
+                                {
+                                    selectArray.map((item,index) => {
+                                        return <Option value={item} key={index}>{item}</Option>
+                                    })
+                                }
+                            </Select>
+                        </div>
+                        <div>
+                            <span>设备总数:</span><br/>
+                            <span>{allDeviceNum}</span>
+                        </div>
+                        <div>
+                            <span>激活设备:</span><br/>
+                            <span>{activationDeviceNum}</span>
+                        </div>
+                        <div>
+                            <span>当前在线:</span><br/>
+                            <span>{liveDeviceNum}</span>
+                        </div>
                     </div>
                     <div>
-                        <span>设备总数:</span><br/>
-                        <span>{allDeviceNum}</span>
+                        <Table columns={dataMode} dataSource={dataBody} />
                     </div>
-                    <div>
-                        <span>激活设备:</span><br/>
-                        <span>{activationDeviceNum}</span>
-                    </div>
-                    <div>
-                        <span>当前在线:</span><br/>
-                        <span>{liveDeviceNum}</span>
-                    </div>
-                </div>
-                <div>
-                    <Table columns={dataMode} dataSource={dataBody} />
-                </div>
                 </>
                 :
                 <Spin size="large"/>
