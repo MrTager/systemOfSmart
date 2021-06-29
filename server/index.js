@@ -36,7 +36,6 @@ app.get('/', function (req, res) {
 //         // Promise.all(_getArr).then((result)=>{
 //         //     res.send(result);
 //         // })
-        
 //     })
     superagent.get(testURL).end((err, sres) => {
         if(err){
