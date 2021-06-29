@@ -43,10 +43,9 @@ app.get('/', function (req, res) {
             return next(err);
         }
         var $ = cheerio.load(sres.text);
-        var topicUrls  = [];
+        var topicUrls = [];
         $('.markdown-text').each(function(idx,element){
             var $element = $(element);
-            
             topicUrls.push( $element)
         })
         res.send(topicUrls);
